@@ -1,0 +1,433 @@
+Analysis & Synthesis report for projeto_ULA
+Tue Jun 18 17:19:07 2019
+Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Jun 18 17:19:07 2019      ;
+; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
+; Revision Name                   ; projeto_ULA                                ;
+; Top-level Entity Name           ; projeto_ULA                                ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 0                                          ;
+; Total pins                      ; 52                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; projeto_ULA        ; projeto_ULA        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+; projeto_ULA.bdf                  ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/projeto_ULA.bdf           ;         ;
+; multiplex.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/multiplex.bdf             ;         ;
+; projeto_soma_subtrai.bdf         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/projeto_soma_subtrai.bdf  ;         ;
+; binarios.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/binarios.bdf              ;         ;
+; num_led.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/num_led.bdf               ;         ;
+; multiplicador_4bit.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/multiplicador_4bit.bdf    ;         ;
+; projeto_multiplicador.bdf        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/projeto_multiplicador.bdf ;         ;
+; divisor_8bit.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/divisor_8bit.bdf          ;         ;
+; divisor_1bit.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/divisor_1bit.bdf          ;         ;
+; multiplex_divisao.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/multiplex_divisao.bdf     ;         ;
+; subtrator.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/subtrator.bdf             ;         ;
+; raiz_8bit.bdf                    ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11219004.USUARIOS/Desktop/projeto_ULA/raiz_8bit.bdf             ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 88       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 132      ;
+;     -- 7 input functions                    ; 2        ;
+;     -- 6 input functions                    ; 41       ;
+;     -- 5 input functions                    ; 23       ;
+;     -- 4 input functions                    ; 42       ;
+;     -- <=3 input functions                  ; 24       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 52       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; B2~input ;
+; Maximum fan-out                             ; 39       ;
+; Total fan-out                               ; 693      ;
+; Average fan-out                             ; 2.94     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |projeto_ULA                         ; 132 (0)           ; 0 (0)        ; 0                 ; 0          ; 52   ; 0            ; |projeto_ULA                                                                      ; work         ;
+;    |divisor_8bit:inst88|             ; 16 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88                                                  ; work         ;
+;       |divisor_1bit:inst10|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst10                              ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst10|multiplex_divisao:inst3      ; work         ;
+;       |divisor_1bit:inst11|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst11                              ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst11|subtrator:inst               ; work         ;
+;       |divisor_1bit:inst13|          ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst13                              ; work         ;
+;          |subtrator:inst|            ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst13|subtrator:inst               ; work         ;
+;       |divisor_1bit:inst14|          ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst14                              ; work         ;
+;          |subtrator:inst|            ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst14|subtrator:inst               ; work         ;
+;       |divisor_1bit:inst15|          ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst15                              ; work         ;
+;          |subtrator:inst|            ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst15|subtrator:inst               ; work         ;
+;       |divisor_1bit:inst3|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst3                               ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst3|subtrator:inst                ; work         ;
+;       |divisor_1bit:inst4|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst4                               ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst4|multiplex_divisao:inst3       ; work         ;
+;       |divisor_1bit:inst5|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst5                               ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst5|multiplex_divisao:inst3       ; work         ;
+;       |divisor_1bit:inst7|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst7                               ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst7|subtrator:inst                ; work         ;
+;       |divisor_1bit:inst9|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst9                               ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst9|multiplex_divisao:inst3       ; work         ;
+;       |divisor_1bit:inst|            ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst                                ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|divisor_8bit:inst88|divisor_1bit:inst|multiplex_divisao:inst3        ; work         ;
+;    |multiplex:inst141|               ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst141                                                    ; work         ;
+;    |multiplex:inst142|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst142                                                    ; work         ;
+;    |multiplex:inst143|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst143                                                    ; work         ;
+;    |multiplex:inst144|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst144                                                    ; work         ;
+;    |multiplex:inst145|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst145                                                    ; work         ;
+;    |multiplex:inst146|               ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst146                                                    ; work         ;
+;    |multiplex:inst147|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst147                                                    ; work         ;
+;    |multiplex:inst148|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst148                                                    ; work         ;
+;    |multiplex:inst149|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst149                                                    ; work         ;
+;    |multiplex:inst14|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst14                                                     ; work         ;
+;    |multiplex:inst30|                ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplex:inst30                                                     ; work         ;
+;    |multiplicador_4bit:inst132|      ; 22 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132                                           ; work         ;
+;       |projeto_multiplicador:inst11| ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst11              ; work         ;
+;          |binarios:bim|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst11|binarios:bim ; work         ;
+;       |projeto_multiplicador:inst13| ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst13              ; work         ;
+;          |binarios:bim|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst13|binarios:bim ; work         ;
+;       |projeto_multiplicador:inst14| ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst14              ; work         ;
+;          |binarios:bim|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst14|binarios:bim ; work         ;
+;       |projeto_multiplicador:inst15| ; 3 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst15              ; work         ;
+;          |binarios:bim|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst15|binarios:bim ; work         ;
+;       |projeto_multiplicador:inst16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst16              ; work         ;
+;       |projeto_multiplicador:inst26| ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst26              ; work         ;
+;          |binarios:bim|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst26|binarios:bim ; work         ;
+;       |projeto_multiplicador:inst4|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst4               ; work         ;
+;          |binarios:bim|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst4|binarios:bim  ; work         ;
+;       |projeto_multiplicador:inst5|  ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst5               ; work         ;
+;          |binarios:bim|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst5|binarios:bim  ; work         ;
+;       |projeto_multiplicador:inst6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst6               ; work         ;
+;       |projeto_multiplicador:inst7|  ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst7               ; work         ;
+;          |binarios:bim|              ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst7|binarios:bim  ; work         ;
+;       |projeto_multiplicador:inst8|  ; 2 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst8               ; work         ;
+;          |binarios:bim|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst8|binarios:bim  ; work         ;
+;       |projeto_multiplicador:inst9|  ; 3 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst9               ; work         ;
+;          |binarios:bim|              ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|multiplicador_4bit:inst132|projeto_multiplicador:inst9|binarios:bim  ; work         ;
+;    |num_led:inst18|                  ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|num_led:inst18                                                       ; work         ;
+;    |num_led:inst3|                   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|num_led:inst3                                                        ; work         ;
+;    |num_led:inst4|                   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|num_led:inst4                                                        ; work         ;
+;    |num_led:inst5|                   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|num_led:inst5                                                        ; work         ;
+;    |num_led:inst9|                   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|num_led:inst9                                                        ; work         ;
+;    |projeto_soma_subtrai:inst1|      ; 7 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst1                                           ; work         ;
+;       |binarios:inst1|               ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst1|binarios:inst1                            ; work         ;
+;       |binarios:inst2|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst1|binarios:inst2                            ; work         ;
+;       |binarios:inst5|               ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst1|binarios:inst5                            ; work         ;
+;    |projeto_soma_subtrai:inst26|     ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst26                                          ; work         ;
+;       |binarios:inst1|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst26|binarios:inst1                           ; work         ;
+;       |binarios:inst2|               ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst26|binarios:inst2                           ; work         ;
+;       |binarios:inst5|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst26|binarios:inst5                           ; work         ;
+;    |projeto_soma_subtrai:inst|       ; 11 (6)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst                                            ; work         ;
+;       |binarios:inst1|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst|binarios:inst1                             ; work         ;
+;       |binarios:inst2|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst|binarios:inst2                             ; work         ;
+;       |binarios:inst3|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst|binarios:inst3                             ; work         ;
+;       |binarios:inst5|               ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst|binarios:inst5                             ; work         ;
+;       |binarios:inst|                ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|projeto_soma_subtrai:inst|binarios:inst                              ; work         ;
+;    |raiz_8bit:inst29|                ; 14 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29                                                     ; work         ;
+;       |divisor_1bit:inst10|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst10                                 ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst10|multiplex_divisao:inst3         ; work         ;
+;       |divisor_1bit:inst11|          ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst11                                 ; work         ;
+;          |multiplex_divisao:inst3|   ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst11|multiplex_divisao:inst3         ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst11|subtrator:inst                  ; work         ;
+;       |divisor_1bit:inst12|          ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst12                                 ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst12|multiplex_divisao:inst3         ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst12|subtrator:inst                  ; work         ;
+;       |divisor_1bit:inst13|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst13                                 ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst13|subtrator:inst                  ; work         ;
+;       |divisor_1bit:inst15|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst15                                 ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst15|subtrator:inst                  ; work         ;
+;       |divisor_1bit:inst27|          ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst27                                 ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst27|multiplex_divisao:inst3         ; work         ;
+;       |divisor_1bit:inst2|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst2                                  ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst2|subtrator:inst                   ; work         ;
+;       |divisor_1bit:inst7|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst7                                  ; work         ;
+;          |subtrator:inst|            ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst7|subtrator:inst                   ; work         ;
+;       |divisor_1bit:inst8|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst8                                  ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst8|multiplex_divisao:inst3          ; work         ;
+;       |divisor_1bit:inst9|           ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst9                                  ; work         ;
+;          |multiplex_divisao:inst3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projeto_ULA|raiz_8bit:inst29|divisor_1bit:inst9|multiplex_divisao:inst3          ; work         ;
++--------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 163                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 161                         ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 42                          ;
+;         5 data inputs ; 23                          ;
+;         6 data inputs ; 41                          ;
+; boundary_port         ; 52                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 5.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
+    Info: Processing started: Tue Jun 18 17:18:54 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_ULA -c projeto_ULA
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file projeto_ula.bdf
+    Info (12023): Found entity 1: projeto_ULA
+Info (12021): Found 1 design units, including 1 entities, in source file multiplex.bdf
+    Info (12023): Found entity 1: multiplex
+Info (12127): Elaborating entity "projeto_ULA" for the top level hierarchy
+Info (12128): Elaborating entity "multiplex" for hierarchy "multiplex:inst30"
+Warning (12125): Using design file projeto_soma_subtrai.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: projeto_soma_subtrai
+Info (12128): Elaborating entity "projeto_soma_subtrai" for hierarchy "projeto_soma_subtrai:inst"
+Warning (12125): Using design file binarios.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: binarios
+Info (12128): Elaborating entity "binarios" for hierarchy "projeto_soma_subtrai:inst|binarios:inst"
+Warning (12125): Using design file num_led.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: num_led
+Info (12128): Elaborating entity "num_led" for hierarchy "num_led:inst4"
+Warning (275011): Block or symbol "NOT" of instance "inst58" overlaps another block or symbol
+Warning (12125): Using design file multiplicador_4bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: multiplicador_4bit
+Info (12128): Elaborating entity "multiplicador_4bit" for hierarchy "multiplicador_4bit:inst132"
+Warning (12125): Using design file projeto_multiplicador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: projeto_multiplicador
+Info (12128): Elaborating entity "projeto_multiplicador" for hierarchy "multiplicador_4bit:inst132|projeto_multiplicador:inst12"
+Warning (12125): Using design file divisor_8bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divisor_8bit
+Info (12128): Elaborating entity "divisor_8bit" for hierarchy "divisor_8bit:inst88"
+Warning (12125): Using design file divisor_1bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divisor_1bit
+Info (12128): Elaborating entity "divisor_1bit" for hierarchy "divisor_8bit:inst88|divisor_1bit:inst11"
+Warning (12125): Using design file multiplex_divisao.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: multiplex_divisao
+Info (12128): Elaborating entity "multiplex_divisao" for hierarchy "divisor_8bit:inst88|divisor_1bit:inst11|multiplex_divisao:inst3"
+Warning (12125): Using design file subtrator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: subtrator
+Info (12128): Elaborating entity "subtrator" for hierarchy "divisor_8bit:inst88|divisor_1bit:inst11|subtrator:inst"
+Warning (12125): Using design file raiz_8bit.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: raiz_8bit
+Info (12128): Elaborating entity "raiz_8bit" for hierarchy "raiz_8bit:inst29"
+Warning (275011): Block or symbol "divisor_1bit" of instance "inst9" overlaps another block or symbol
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 184 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 132 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Tue Jun 18 17:19:07 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:19
+
+
